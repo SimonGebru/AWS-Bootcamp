@@ -1,0 +1,13 @@
+{
+  "name": "ovning-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "zip": "rm -f index.mjs.zip && zip -X -r index.mjs.zip index.mjs",
+    "deploy": "npm run zip && aws lambda update-function-code --function-name Ovning4 --zip-file fileb://index.mjs.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
